@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:background="#FFFFFF"
+    android:elevation="8dp">
+
+    <LinearLayout
+        android:id="@+id/nav_users"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+
+        <TextView
+            android:id="@+id/usersText"
+            android:drawablePadding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Users"
+            android:textSize="16sp"
+            android:textColor="#757575"
+            android:layout_marginStart="8dp"
+            app:drawableStartCompat="@drawable/ic_bottom_menu_users_background" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nav_sign_up"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:drawablePadding="10dp"
+            android:id="@+id/signUpText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign up"
+            android:textSize="16sp"
+            android:layout_marginStart="8dp"
+            app:drawableStartCompat="@drawable/ic_bottom_menu_sign_up_background" />
+    </LinearLayout>
+</LinearLayout>

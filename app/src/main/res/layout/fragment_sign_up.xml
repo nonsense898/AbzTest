@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp">
+
+            <io.github.ackeecz.ui.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:hint="Your name"
+                android:textColorHint="#7A000000"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                app:boxStrokeColor="@color/colorPrimary"
+                app:boxStrokeWidth="1dp"
+                app:boxStrokeWidthFocused="1dp"
+                app:errorTextColor="#CB3D40"
+                app:hintEnabled="true"
+                app:hintPaddingTop="12dp"
+                app:hintTextAppearance="@style/TextAppearance.Design.Hint"
+                app:hintTextColor="#7A000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <io.github.ackeecz.ui.textfield.TextInputEditText
+                    android:id="@+id/nameInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:paddingStart="16dp"
+                    android:paddingTop="28dp"
+                    android:paddingBottom="16dp"
+                    android:singleLine="true"
+                    android:textColor="#99000000" />
+            </io.github.ackeecz.ui.textfield.TextInputLayout>
+
+            <io.github.ackeecz.ui.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Email"
+                android:textColorHint="#7A000000"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                app:boxStrokeColor="@color/colorPrimary"
+                app:boxStrokeWidth="1dp"
+                app:boxStrokeWidthFocused="1dp"
+                app:errorTextColor="#CB3D40"
+                app:hintEnabled="true"
+                app:hintPaddingTop="12dp"
+                app:hintTextAppearance="@style/TextAppearance.Design.Hint"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutName">
+
+                <io.github.ackeecz.ui.textfield.TextInputEditText
+                    android:id="@+id/emailInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="16dp"
+                    android:paddingTop="28dp"
+                    android:paddingBottom="16dp"
+                    android:singleLine="true"
+                    android:textColor="#99000000" />
+            </io.github.ackeecz.ui.textfield.TextInputLayout>
+
+
+            <io.github.ackeecz.ui.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Phone"
+                android:textColorHint="#7A000000"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                app:boxStrokeColor="@color/colorPrimary"
+                app:boxStrokeWidth="1dp"
+                app:boxStrokeWidthFocused="1dp"
+                app:errorTextColor="#CB3D40"
+                app:helperText="+38 (XXX) XXX - XX - XX"
+                app:hintEnabled="true"
+                app:hintPaddingTop="12dp"
+                app:hintTextAppearance="@style/TextAppearance.Design.Hint"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutEmail">
+
+                <io.github.ackeecz.ui.textfield.TextInputEditText
+                    android:id="@+id/phoneInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:inputType="phone"
+                    android:paddingStart="16dp"
+                    android:paddingTop="28dp"
+                    android:paddingBottom="16dp"
+                    android:singleLine="true"
+                    android:textColor="#99000000" />
+            </io.github.ackeecz.ui.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Select your position"
+                android:textColor="#D9000000"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutPhone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/positionRecycleView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toTopOf="@+id/textInputLayoutUpload"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                tools:itemCount="4"
+                tools:listitem="@layout/item_position" />
+
+
+            <io.github.ackeecz.ui.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutUpload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Upload your photo"
+                android:textColorHint="#7A000000"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:errorIconDrawable="@android:color/transparent"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                app:boxStrokeColor="@color/colorPrimary"
+                app:boxStrokeWidth="1dp"
+                app:boxStrokeWidthFocused="1dp"
+                app:errorTextColor="#CB3D40"
+                app:hintEnabled="true"
+                app:hintPaddingTop="12dp"
+                app:hintTextAppearance="@style/TextAppearance.Design.Hint"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/positionRecycleView">
+
+                <io.github.ackeecz.ui.textfield.TextInputEditText
+                    android:id="@+id/uploadInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:inputType="none"
+                    android:paddingStart="16dp"
+                    android:paddingTop="28dp"
+                    android:paddingBottom="16dp"
+                    android:textColor="#99000000" />
+
+            </io.github.ackeecz.ui.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/CustomButton"
+                android:id="@+id/submitBtn"
+                android:layout_width="140dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="32dp"
+                android:text="Sign Up"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutUpload" />
+
+            <TextView
+                android:id="@+id/uploadButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="16dp"
+                android:text="Upload"
+                android:textColor="#00BDD3"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textInputLayoutUpload"
+                app:layout_constraintEnd_toEndOf="@+id/textInputLayoutUpload"
+                app:layout_constraintTop_toTopOf="@+id/textInputLayoutUpload"
+              />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>

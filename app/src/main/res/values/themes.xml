@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="Theme.AbzTest" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@android:color/white</item>
+    </style>
+
+    <style name="HintTextStyle" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ErrorTextStyle" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textColor">@color/colorError</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="CustomButton" parent="Widget.Material3.Button">
+        <item name="android:layout_width">140dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:backgroundTint">@color/button_tint</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="shapeAppearance">@style/CustomButtonShape</item>
+    </style>
+
+    <style name="CustomButtonShape" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerSize">24dp</item>
+    </style>
+
+
+    <style name="FullScreenDialog" parent="Theme.Material3.Light.Dialog.Alert">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+</resources>
