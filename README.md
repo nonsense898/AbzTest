@@ -1,8 +1,8 @@
-# MyApp
+# AbzTest
 
 ## Description
 
-MyApp is an Android application that displays a list of users and allows you to register new users. It includes functionality such as network connectivity checks, real-time data updates, user list sorting, and animations.
+AbzTest is an Android application that displays a list of users and allows you to register new users. It includes functionality such as network connectivity checks, real-time data updates, user list sorting, and animations.
 
 ## Features
   • The app follows a single activity architecture using a navigation framework, ensuring smooth transitions between different screens while simplifying lifecycle management.
